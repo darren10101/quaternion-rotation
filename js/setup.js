@@ -67,7 +67,7 @@ class Vector {
     return V.$(x*cos-y*sin,x*sin+y*cos,-w*sin+z*cos);
   }
   plot() {
-    let sl = Math.abs((focal-near)/(focal-this.z));
+    let sl = (focal-near)/(focal-this.z);
     return V.$(canvas.origin.x+this.x*sl, canvas.origin.y-this.y*sl, this.z);
   }
   point() {return P.$(this.x,this.y);}

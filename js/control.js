@@ -19,7 +19,7 @@ function start() {
   });
   canvas.onmousewheel = function (e) {
     let w = e.wheelDelta;
-    if (w>0) {
+    if (w>0 && (focal-near)/focal<10) {
       near-=50;
       focal-=50;
     } else {
